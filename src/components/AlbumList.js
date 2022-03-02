@@ -71,6 +71,50 @@ const Albumlist = () => {
           />
         </View>
       </View>
+      <View style={styles.cardContainerStyle}>
+        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
+          <Image
+            style={styles.thumbnailStyle}
+            source={{
+              uri: albumData[3].thumbnail_image
+            }}
+          />
+          <View style={styles.headerContentStyle}>
+            <Text>{albumData[3].title}</Text>
+            <Text>{albumData[3].artist}</Text>
+          </View>
+        </View>
+        <View style={styles.cardSectionStyle}>
+          <Image
+            style={styles.imageStyle}
+            source={{
+              uri: albumData[3].image
+            }}
+          />
+        </View>
+      </View>
+      <View style={styles.cardContainerStyle}>
+        <View style={[styles.thumbnailContainerStyle, styles.cardSectionStyle]}>
+          <Image
+            style={styles.thumbnailStyle}
+            source={{
+              uri: albumData[4].thumbnail_image
+            }}
+          />
+          <View style={styles.headerContentStyle}>
+            <Text>{albumData[4].title}</Text>
+            <Text>{albumData[4].artist}</Text>
+          </View>
+        </View>
+        <View style={styles.cardSectionStyle}>
+          <Image
+            style={styles.imageStyle}
+            source={{
+              uri: albumData[4].image
+            }}
+          />
+        </View>
+      </View>
     </ScrollView>
   );
 };
@@ -81,6 +125,7 @@ const styles = StyleSheet.create({
     justifyContent: "flex-start"
   },
   thumbnailStyle: {
+    borderRadius: 50,
     height: 50,
     width: 50,
     margin: 5
